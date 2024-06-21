@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        *{
+            margin:0;
+        }
+        header{
+            background-color: black;
+            color:white;
+            height:50px;
+            padding-top:30px;
+            padding-bottom:20px;
+            text-align:center;   
+        }
+        .n1{
+            
+            text-align:center;
+            width:300px;
+            height:300px;
+            background-color:rgb(165, 162, 162);
+            border:2px solid black;
+        }
+        .n4{
+            position:relative;
+            top:140px;
+        }
+        .m1{
+            border:1px solid gray;
+            margin-top:282px;
+            padding:10px 0;
+            width:300px;
+            height:auto;
+            text-align:center;
+        }
+        .container{
+            display:flex;
+            gap:20px;
+            justify-content:center;
+            margin-top:10px;
+
+        }
+        .n2{
+            
+            text-align:center;
+            width:300px;
+            height:300px;
+            background-color:rgb(165, 162, 162);
+            border:2px solid black;
+        }
+        .n4{
+            position:relative;
+            top:140px;
+        }
+        .m2{
+            border:1px solid gray;
+            margin-top:282px;
+            padding:10px 0;
+            width:300px;
+            height:auto;
+            text-align:center;
+        }
+        .submit{
+            background-color: black;
+            color:white;
+            display:flex;
+            width:300px;
+            margin-top:10px;
+            position:relative;
+            top:9.5px;
+            cursor:pointer;
+
+        }
+        .submit:hover{
+              color:greenyellow;
+        }
+        .submit:active{
+            background-color: green;
+        }
+        .submit .fa-shopping-cart{
+            position:relative;
+            left:200px;
+        }
+        .clear{
+            border:2px solid gray;
+            background-color: black;
+            color:white;
+            padding:7px;
+            cursor:pointer;
+            border-radius:5px;
+            letter-spacing:2px;
+        }
+        .clear:hover{
+            color:brown;
+        }
+        .clear:active{
+            background-color: red;
+        }
+
+        
+
+        
+    </style>
+
+
+</head>
+<body>
+<header>
+    <h1>Responsive eCommerce Page</h1>
+</header>
+<div class="container">
+    <div class="n1"> <p class="n4">300  X  300</p>
+        <div class="m1">
+            <b>Product Name 1</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <p>Price: $19.99</p>
+            <button class="submit" type="button" onclick="get('Product1',19.99)">Add to Cart 
+                <div class="fas fa-shopping-cart" ></div>
+            </button>
+    </div>
+   
+    </div>
+    <div class="n2"><p class="n4">300  X  300</p>
+        <div class="m2">
+            <b>Product Name 2</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <p>Price: $30.99</p>
+            <button class="submit" type="button" onclick="get('Product 2',30.99)" >Add to Cart 
+                <div class="fas fa-shopping-cart" ></div>
+            </button>
+        </div>
+    </div>
+    
+</div>
+<br>
+<br><br><br><br><br><br><br><br><br>
+<hr>
+<div class="cart"><b style="font-size:1.5rem;">Cart</b><br>
+    <ul id="u1"></ul><br>
+<input type="submit" value="Clear Cart" class="clear" onclick="finish()">
+</div>
+
+
+
+    
+</body>
+<script>
+    document.write("<br>")
+    document.write("<br>")
+    function get(a,b){
+        var m=document.getElementById("u1");
+        var c=document.createElement("div");
+        c.textContent = a + " " + b;
+        m.appendChild(c);
+        
+    }
+    function finish(){
+        document.getElementById("u1").innerHTML=""
+    }
+
+
+</script>
+</html>
